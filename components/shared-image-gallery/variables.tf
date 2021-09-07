@@ -5,6 +5,7 @@ variable "env" {
 variable "product" {
   description = "Name of the product."
   type        = string
+  default     = "shared-image-gallery"
 }
 
 variable "location" {
