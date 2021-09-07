@@ -26,7 +26,7 @@ parameters:
     default:
     - deployment: 'prod'
       environment: 'prod'
-      component: 'shared_image_gallery'
+      component: 'shared-image-gallery'
       service_connection: 'DTS-MANAGEMENT-PROD-INTSVC'
       dependsOn: 'Precheck'
 
