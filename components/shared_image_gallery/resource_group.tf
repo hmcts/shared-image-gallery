@@ -8,5 +8,5 @@ module "ctags" {
 resource "azurerm_resource_group" "image_gallery_rg" {
   name     = var.resource_group_name
   location = var.location
-  tags     = var.common_tags
+  #tags     = var.common_tags
 }
