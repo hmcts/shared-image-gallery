@@ -25,6 +25,7 @@ parameters:
     type: object
     default:
     - deployment: 'prod'
+      environment: 'prod'
       component: 'shared_image_gallery'
       service_connection: 'DTS-MANAGEMENT-PROD-INTSVC'
       dependsOn: 'Precheck'
@@ -70,6 +71,7 @@ stages:
           - template: steps/terraform.yaml@cnp-azuredevops-libraries
             parameters:
               overrideAction: ${{ parameters.overrideAction }}
+              environment: ${{ deployment.environment }}
               component: ${{ deployment.component }}
               serviceConnection: ${{ deployment.service_connection }}
               terraformInitSubscription: ${{ variables.terraformInitSubscription }}
