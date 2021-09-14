@@ -1,6 +1,10 @@
 variable "env" {
   description = "Name of the environment to deploy the resource."
 }
+variable "product" {
+  description = "Name of the product."
+  default     = "shared-image-gallery"
+}
 
 variable "location" {
   description = "Azure location to deploy the resource"
