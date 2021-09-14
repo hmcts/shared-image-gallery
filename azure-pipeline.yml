@@ -26,7 +26,7 @@ parameters:
     default:
     - deployment: 'prod'
       environment: 'prod'
-      component: 'shared_image_gallery'
+      component: 'shared-image-gallery'
       service_connection: 'DTS-MANAGEMENT-PROD-INTSVC'
       dependsOn: 'Precheck'
 
@@ -39,7 +39,7 @@ variables:
   - name: build
     value: $(Build.BuildNumber)
   - name: product
-    value: shared_image_gallery
+    value: shared-image-gallery
   - name: terraformInitSubscription
     value: 04d27a32-7a07-48b3-95b8-3c8691e1a263
   - template: vars/input-variables.yaml@cnp-azuredevops-libraries
