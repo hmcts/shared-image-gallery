@@ -21,8 +21,8 @@ resource "azurerm_shared_image" "bastion-ubuntu" {
 }
 
 data "azurerm_image" "bastion-ubuntu" {
-  name                = var.image_name
-  resource_group_name = azurerm_resource_group.image_gallery_rg.name
+  name                = "rdo-bastion-image-151746"
+  resource_group_name = "rdo-bastion-packer"
 }
 
 data "azurerm_shared_image" "bastion-ubuntu" {
@@ -41,6 +41,6 @@ resource "azurerm_shared_image_version" "image_version" {
 
   target_region {
     name                   = azurerm_resource_group.image_gallery_rg.location
-    regional_replica_count = 2
+    regional_replica_count = 1
   }
 }
