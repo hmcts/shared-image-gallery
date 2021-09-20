@@ -34,7 +34,7 @@ data "azurerm_shared_image" "bastion-ubuntu" {
 resource "azurerm_shared_image_version" "image_version" {
   name                = "1.0.0"
   gallery_name        = azurerm_shared_image_gallery.image_gallery.name
-  image_name          = data.azurerm_shared_image.existing.name
+  image_name          = data.azurerm_shared_image.bastion-ubuntu.name
   resource_group_name = azurerm_resource_group.image_gallery_rg.name
   location            = azurerm_resource_group.image_gallery_rg.location
 
