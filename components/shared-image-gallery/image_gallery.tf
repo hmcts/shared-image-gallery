@@ -14,7 +14,7 @@ resource "azurerm_shared_image" "bastion-ubuntu" {
   os_type             = "Linux"
 
   identifier {
-    publisher = "Canonical"
+    publisher = "hmcts"
     offer     = "UbuntuServer"
     sku       = "18.04-LTS"
   }
