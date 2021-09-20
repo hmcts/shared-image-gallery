@@ -37,6 +37,7 @@ resource "azurerm_shared_image_version" "image_version" {
   image_name          = data.azurerm_shared_image.bastion-ubuntu.name
   resource_group_name = azurerm_resource_group.image_gallery_rg.name
   location            = azurerm_resource_group.image_gallery_rg.location
+  managed_image_id    = data.azurerm_image.bastion-ubuntu.id
 
   target_region {
     name                   = azurerm_resource_group.image_gallery_rg.location
