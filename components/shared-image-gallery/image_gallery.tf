@@ -9,7 +9,7 @@ resource "azurerm_shared_image_gallery" "image_gallery" {
 resource "azurerm_shared_image" "bastion-ubuntu" {
   name                = "bastion-ubuntu"
   gallery_name        = azurerm_shared_image_gallery.image_gallery.name
-  resource_group_name = azurerm_resource_group.image_gallery_rg.name
+  resource_group_name = "bastion-packer"
   location            = azurerm_resource_group.image_gallery_rg.location
   os_type             = "Linux"
 
