@@ -15,7 +15,7 @@ resource "azurerm_shared_image" "bastion-ubuntu" {
 
   identifier {
     publisher = "hmcts"
-    offer     = "UbuntuServer"
+    offer     = "bastion-ubuntu"
     sku       = "18.04-LTS"
   }
 }
