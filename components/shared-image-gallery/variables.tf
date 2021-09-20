@@ -22,3 +22,7 @@ variable "resource_group_name" {
 variable "image_gallery_name" {
   default = "hmcts"
 }
+
+variable "image_name" {
+  default = "bastion-ubuntu"
+}
