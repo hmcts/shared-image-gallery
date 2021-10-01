@@ -8,7 +8,7 @@ resource "azurerm_shared_image_gallery" "image_gallery" {
 
 resource "azurerm_shared_image" "shared_image" {
   for_each            = var.images
-  name                = each.value.name
+  name                = each.key
   gallery_name        = azurerm_shared_image_gallery.image_gallery.name
   resource_group_name = azurerm_resource_group.image_gallery_rg.name
   location            = azurerm_resource_group.image_gallery_rg.location
@@ -16,14 +16,14 @@ resource "azurerm_shared_image" "shared_image" {
 
   identifier {
     publisher = "hmcts"
-    offer     = each.value.name
+    offer     = each.key
     sku       = each.value.sku
   }
 }
 
 resource "azurerm_managed_disk" "managed_disk" {
   for_each             = var.images
-  name                 = "${each.value}-disk"
+  name                 = "${each.key}-disk"
   location             = azurerm_resource_group.image_gallery_rg.location
   resource_group_name  = azurerm_resource_group.image_gallery_rg.name
   storage_account_type = "Standard_LRS"
@@ -33,7 +33,7 @@ resource "azurerm_managed_disk" "managed_disk" {
 
 resource "azurerm_snapshot" "snapshot" {
   for_each            = var.images
-  name                = "${each.value}-snapshot"
+  name                = "${each.key}-snapshot"
   location            = azurerm_resource_group.image_gallery_rg.location
   resource_group_name = azurerm_resource_group.image_gallery_rg.name
   create_option       = "Copy"
