@@ -31,10 +31,10 @@ variable "images" {
   type = map(any)
   default = {
     "jenkins-agent" = {
-      "sku"  = "7_9"
+      "sku" = "7_9"
     },
     "bastion-ubuntu" = {
-      "sku"  = "18.04-LTS"
+      "sku" = "18.04-LTS"
     }
   }
 }
