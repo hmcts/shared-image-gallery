@@ -26,3 +26,15 @@ variable "image_gallery_name" {
 variable "image_name" {
   default = "bastion-ubuntu"
 }
+
+variable "images" {
+  type = map(any)
+  default = {
+    "jenkins-agent" = {
+      "sku" = "7_9"
+    },
+    "bastion-ubuntu" = {
+      "sku" = "18.04-LTS"
+    }
+  }
+}
