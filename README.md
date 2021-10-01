@@ -10,5 +10,5 @@ In order to create an image version that can be used to create a viable virtual 
 
 See example in https://github.com/hmcts/bastion-packer
 
-To add a new image definition, update the images variable map in variables.tf
+To add a new image definition, update the images variable map in https://github.com/hmcts/shared-image-gallery/blob/master/components/shared-image-gallery/variables.tf
 
