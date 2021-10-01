@@ -34,16 +34,14 @@ variable "images" {
       "name"         = "jenkins-agent",
       "managed_disk" = "jenkins-agent-disk",
       "snapshot"     = "jenkins-agent-snapshot",
-      "publisher"    = "OpenLogic",
-      "offer"        = "CentOS",
+      "offer"        = "jenkins-agent",
       "sku"          = "7_9"
     },
     "bastion-ubuntu" = {
       "name"         = "bastion-ubuntu",
       "managed_disk" = "bastion-ubuntu-disk",
       "snapshot"     = "bastion-ubuntu-snapshot",
-      "publisher"    = "Canonical",
-      "offer"        = "UbuntuServer",
+      "offer"        = "bastion-ubuntu",
       "sku"          = "18.04-LTS"
     }
   }
