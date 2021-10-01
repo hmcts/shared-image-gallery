@@ -32,16 +32,10 @@ variable "images" {
   default = {
     "jenkins-agent" = {
       "name"         = "jenkins-agent",
-      "managed_disk" = "jenkins-agent-disk",
-      "snapshot"     = "jenkins-agent-snapshot",
-      "offer"        = "jenkins-agent",
       "sku"          = "7_9"
     },
     "bastion-ubuntu" = {
       "name"         = "bastion-ubuntu",
-      "managed_disk" = "bastion-ubuntu-disk",
-      "snapshot"     = "bastion-ubuntu-snapshot",
-      "offer"        = "bastion-ubuntu",
       "sku"          = "18.04-LTS"
     }
   }
