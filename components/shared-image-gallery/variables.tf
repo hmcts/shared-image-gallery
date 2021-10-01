@@ -26,3 +26,25 @@ variable "image_gallery_name" {
 variable "image_name" {
   default = "bastion-ubuntu"
 }
+
+variable "images" {
+  type = map(any)
+  default = {
+    "jenkins-agent" = {
+      "name"         = "jenkins-agent",
+      "managed_disk" = "jenkins-agent-disk",
+      "snapshot"     = "jenkins-agent-snapshot",
+      "publisher"    = "OpenLogic",
+      "offer"        = "CentOS",
+      "sku"          = "7_9"
+    },
+    "bastion-ubuntu" = {
+      "name"         = "bastion-ubuntu",
+      "managed_disk" = "bastion-ubuntu-disk",
+      "snapshot"     = "bastion-ubuntu-snapshot",
+      "publisher"    = "Canonical",
+      "offer"        = "UbuntuServer",
+      "sku"          = "18.04-LTS"
+    }
+  }
+}
