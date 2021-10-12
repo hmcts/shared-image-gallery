@@ -2,7 +2,7 @@ data "azurerm_subscription" "subscription" {
   provider = azurerm.dts-management-prod-intsvc
 }
 
-data "azuread_service_principal" "jenkins-mi" {
+data "azuread_service_principal" "jenkins" {
   for_each     = toset(var.jenkins-mi)
   display_name = each.key
 }
