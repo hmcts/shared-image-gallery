@@ -15,7 +15,7 @@ data "azuread_service_principal" "cftsbox_jenkins" {
   display_name = "jenkins-cftsbox-intsvc-mi"
 }
 
-resource "azurerm_role_assignment" "cftptl_jenkins" {
+resource "azurerm_role_assignment" "cftsbox_jenkins" {
   scope                = data.azurerm_subscription.subscription.id
   role_definition_name = "Reader"
   principal_id         = data.azuread_service_principal.cftsbox_jenkins.id
