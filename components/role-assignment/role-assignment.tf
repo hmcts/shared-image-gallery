@@ -8,7 +8,7 @@ data "azuread_service_principal" "jenkins" {
 }
 
 resource "azurerm_role_assignment" "jenkins_read" {
-  for_each             = toset(var.jenkins-mi)
+  for_each             = toset(var.jenkins_mi)
   scope                = data.azurerm_subscription.subscription.id
   role_definition_name = "Reader"
   principal_id         = data.azuread_service_principal.jenkins-mi[each.key].id
