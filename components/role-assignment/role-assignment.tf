@@ -3,7 +3,7 @@ data "azurerm_subscription" "subscription" {
 }
 
 data "azuread_service_principal" "jenkins" {
-  for_each     = toset(var.jenkins-mi)
+  for_each     = toset(var.jenkins_mi)
   display_name = each.key
 }
 
