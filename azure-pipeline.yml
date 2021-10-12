@@ -29,6 +29,11 @@ parameters:
       component: 'shared-image-gallery'
       service_connection: 'DTS-MANAGEMENT-PROD-INTSVC'
       dependsOn: 'Precheck'
+    - deployment: 'roles'
+      environment: 'prod'
+      component: 'role-assignment'
+      service_connection: 'OPS-APPROVAL-GATE-PROD-ENVS'
+      dependsOn: 'prod'
 
 
 variables:
