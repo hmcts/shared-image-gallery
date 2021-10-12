@@ -9,3 +9,12 @@ variable "product" {
 variable "builtFrom" {
   description = "Name of the GitHub repository this application is being built from."
 }
+
+variable "jenkins-mi" {
+  type = map(any)
+  default = {
+    "jenkins-cftptl-intsvc-mi" ={},
+    "jenkins-cftsbox-intsvc-mi" = {},
+    "jenkins-ptl-mi" = {}
+  }
+}
