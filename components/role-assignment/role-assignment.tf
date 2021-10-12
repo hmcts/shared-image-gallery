@@ -1,4 +1,5 @@
 data "azurerm_subscription" "subscription" {
+  provider = azurerm.dts-management-prod-intsvc
 }
 
 data "azuread_service_principal" "cftptl_jenkins" {
