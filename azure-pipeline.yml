@@ -32,7 +32,7 @@ parameters:
     - deployment: 'roles'
       environment: 'prod'
       component: 'role-assignment'
-      service_connection: 'DTS-MANAGEMENT-PROD-INTSVC-AD'
+      service_connection: 'OPS-APPROVAL-GATE-PROD-ENVS'
       dependsOn: 'prod'
 
 
