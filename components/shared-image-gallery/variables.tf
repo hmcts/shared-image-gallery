@@ -35,6 +35,9 @@ variable "images" {
     },
     "bastion-ubuntu" = {
       "sku" = "18.04-LTS"
+    },
+    "jenkins-ubuntu" = {
+      "sku" = "20.04-LTS"
     }
   }
 }
