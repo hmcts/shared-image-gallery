@@ -13,6 +13,7 @@ resource "azurerm_shared_image" "shared_image" {
   resource_group_name = azurerm_resource_group.image_gallery_rg.name
   location            = azurerm_resource_group.image_gallery_rg.location
   os_type             = "Linux"
+  hyper_v_generation  = each.value.vm_generation
 
   identifier {
     publisher = "hmcts"
