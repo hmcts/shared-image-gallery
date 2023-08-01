@@ -42,6 +42,10 @@ variable "images" {
       "sku"           = "20.04-LTS"
       "vm_generation" = "V1"
     },
+    "jenkins-ubuntu-arm" = {
+      "sku"           = "20.04-LTS"
+      "vm_generation" = "V2"
+    },
     "devops-ubuntu" = {
       "sku"           = "22.04-LTS"
       "vm_generation" = "V2"
