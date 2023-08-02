@@ -14,7 +14,7 @@ resource "azurerm_shared_image" "shared_image" {
   location            = azurerm_resource_group.image_gallery_rg.location
   os_type             = "Linux"
   hyper_v_generation  = each.value.vm_generation
-  architecture        = each.value.architecture == "" ? "x64" : each.value.architecture
+  architecture        = lookup(var.images, each.value.architecture, "x64")
 
   identifier {
     publisher = "hmcts"
