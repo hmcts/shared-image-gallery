@@ -42,10 +42,6 @@ variable "images" {
       "sku"           = "20.04-LTS"
       "vm_generation" = "V1"
     },
-    "jenkins-ubuntu-v2" = {
-      "sku"           = "24.04-LTS"
-      "vm_generation" = "V2"
-    },
     "jenkins-ubuntu-arm" = {
       "architecture"  = "Arm64"
       "sku"           = "20.04-LTS"
@@ -53,6 +49,10 @@ variable "images" {
     },
     "devops-ubuntu" = {
       "sku"           = "22.04-LTS"
+      "vm_generation" = "V2"
+    },
+    "jenkins-ubuntu-v2" = {
+      "sku"           = "24.04-LTS"
       "vm_generation" = "V2"
     }
   }
