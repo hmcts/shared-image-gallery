@@ -31,6 +31,8 @@ resource "azurerm_managed_disk" "managed_disk" {
   storage_account_type = "Standard_LRS"
   create_option        = "Empty"
   disk_size_gb         = "1"
+
+  tags = module.ctags.common_tags
 }
 
 resource "azurerm_snapshot" "snapshot" {
